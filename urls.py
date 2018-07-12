@@ -17,5 +17,6 @@ urlpatterns = (
 urlpatterns += (
     # urls for patientVisit
     url(r'^photo/$', views.upload.as_view(), name='upload'),
+    url(r'^video/$', views.videoupload.as_view(), name='videoupload'),
 
 )

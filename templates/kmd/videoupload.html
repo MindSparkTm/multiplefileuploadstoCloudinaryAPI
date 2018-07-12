@@ -1,0 +1,58 @@
+{% load cloudinary %}
+
+{% block body %}
+  <div id='backend_upload'>
+<form action="{% url 'videoupload' %}" method="POST"
+          enctype="multipart/form-data">
+    {% csrf_token %}
+                    <div>
+                        <label class="desc" id="title1">Title of Post</label>
+                        <div>
+                          <input type="text" id="title" name="title"  spellcheck="true" maxlength="70" style=" width: 100%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;"></input>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div>
+                        <label class="desc" id="title3">
+                            Description
+                        </label>
+                      <div>
+                            <textarea id="description" name="description" spellcheck="true" rows="10" cols="50" tabindex="4" style="width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;"></textarea>
+                        </div>
+                    </div>
+                    <br>
+
+                 <div>
+                        <label class="desc" id="title4">
+                            Upload image if you want (Optional).<br>
+                        </label>
+
+                        <div>
+                            <input name="uploadedfile" style="font-family: Cursive;  font-size: 20px;" id="uploadedfile" type="file" multiple/>
+                        </div>
+                    </div>
+
+                    <br>
+
+
+
+
+
+
+    <input type="submit" value="Upload">
+    </form>
+  </div>
+{% endblock %}
